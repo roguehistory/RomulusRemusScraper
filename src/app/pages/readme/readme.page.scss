@@ -1,0 +1,14 @@
+:host{
+    .container{
+        margin:10px;
+        padding:5px;
+    }
+    .image{
+        // max-width:800px;
+        margin:0 auto;
+        text-align: center;
+        img{
+            height:100%;
+        }
+    }
+}

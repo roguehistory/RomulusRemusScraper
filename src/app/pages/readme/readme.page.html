@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>readme</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="list"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false" color="primary"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="container">
+    <h4>YouTube Scrape <sub>V1.0 Beta</sub></h4>
+    <h5><a href="https://rr-scrape.herokuapp.com/">https://rr-scrape.herokuapp.com/</a></h5>
+    <div class="container">
+      <p>Utilizes two main tools to complete the task. There is an indipendant NodeJS script that runs in terminal against a CSV list of provided YouTube viedo IDs</p>
+      <p>After scraping the data from the supplied CSV, the front-end tool is deployed to view the data. These will eventually be integrated together, and user will be able to upload new files for processing directly from within the app.</p>
+      <p>There are several dependencies within NodeJS that must be installed in order to utilize the tool locally on your computer. To navigate the issue, the app has been deployed to a free Heroku instance, where it can be accessed by anyone using this <a class="link" href="https://rr-scrape.herokuapp.com">link</a></p>
+    </div>
+    <div class="image ion-padding">
+      <img src="../../../assets/images/diagram.png" alt="">
+    </div>
+  </div>
+
+  <div class="container">
+    <h4>Dev Stack</h4>
+    <ul>
+      <li>
+        <h5>Ionic Framework - UI</h5>
+        <p>Local or Heroku</p>
+      </li>
+      <li>
+        <h5>Nodejs - Data Scraper</h5>
+        <p>Local only. In development to integrate with front-end, making the scraper accessible from Heroku as well.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h4>Source Control</h4>
+    <p>The course files for this project are held within a private GitHub repo and can be shared or forked by a contributer who is granted access. The files can also be moved at any time to another repo that is controlled by the client.</p>
+    <p><a class="link" href="https://github.com/AlphaNerd2021?tab=repositories">https://github.com/AlphaNerd2021?tab=repositories</a></p>
+    <p>To update and push code to GitHub:</p>
+    <ul>
+      <li>$ git add .</li>
+      <li>git commit -m "[some commnets here]"</li>
+      <li>git push</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h4>Deployment</h4>
+    <p>The app is automatically deployed to Heroku once it is updated in GitHub. Very easy and no hassle. Heroku also handles all needed SSL security certs to maintain a secure interface (overkill at the moment, but will allow for features to be added later that allow users to upload files etc.</p>
+    <ul>
+      <li>
+        <h5>Run Locally</h5>
+        <p>$ git clone [repo-address-here]</p>
+        <p>$ cd YouTube-Scraper</p>
+        <p>* if needed run $ nvm use 14.15</p>
+        <p>$ npm install  This will innstall all required dependencies to run the application in your browser, from your computer (aka: locally). You only need to do this the first time you download the app, before you run it.</p>
+        <p>$ npm start  This will run the front-end application in your browser.</p>
+      </li>
+    </ul>
+  </div>
+
+
+</ion-content>

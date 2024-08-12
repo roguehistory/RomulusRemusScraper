@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false" color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-searchbar animated [(ngModel)]="searchText"></ion-searchbar>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher> -->  
+  <ion-list class="data-list">
+    <ng-template ngFor let-item [ngForOf]="VIDEOS | appFilter: searchText" let-i="index">
+      <ion-item-sliding>
+        <ion-item routerLink="/details/{{item.id}}">
+          <!-- <ion-avatar slot="start">
+            <ion-img [src]="item?.thumbnail"></ion-img>
+          </ion-avatar> -->
+          <ion-label>
+            <ion-grid>
+              <ion-row class="ion-align-items-start ion-justify-content-between">
+                <ion-col>
+                  <h2><ion-icon name="time-outline"></ion-icon> <span class="time">{{item.duration_raw}}</span> &nbsp; <strong class="link">{{item.title}}</strong></h2>
+                  <h3><strong>ID</strong>: {{item.id}}</h3>
+                  <h4><strong>Uploaded</strong>: {{item.uploaded}}</h4>
+                  <br>
+                  <p>{{item?.description}}</p>
+                </ion-col>
+                <ion-col>
+                  <h4><ion-icon name="eye-outline"></ion-icon>&nbsp;{{item.views | number}}</h4>
+                  <h4><ion-icon name="chatbubbles-outline"></ion-icon>&nbsp; {{item?.comments?.length}}</h4>
+                  <h4><ion-icon name="person-outline"></ion-icon>&nbsp; <a href="{{item?.channel?.link}}">{{item?.channel?.name}}</a></h4>
+                  <h4><ion-icon name="phone-landscape-outline"></ion-icon>&nbsp; {{item?.captions?.length > 0 ? 'Yes' : 'No'}}</h4>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option (click)="gotoUrl(item?.link)">View Video</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ng-template> 
+  </ion-list>
+
+
+</ion-content>

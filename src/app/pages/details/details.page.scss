@@ -1,0 +1,186 @@
+:host {
+
+    .comments{
+        display: none;
+    }
+
+  .link:hover {
+    cursor: pointer;
+  }
+
+  .time {
+    // font-size: 12px;
+  }
+
+  ion-icon {
+    position: relative !important;
+    left: -3px !important;
+    top: 4px !important;
+  }
+
+
+}
+.caption{
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+//   max-width: 450px;
+  background: #fff;
+  margin: 0 auto;
+//   margin-top: 50px;
+//   border-radius: 10px;
+  position: relative;
+//   box-shadow: #292739 0 10px 20px;
+}
+
+.header {
+  background: #f3f3f3;
+  display: flex;
+  padding: 15px;
+//   border-radius: 10px 10px 0 0;
+}
+.grp-img {
+  position: relative;
+  width: 125px;
+  height: 45px;
+}
+.grp-img img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: solid 2px white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.grp-img .i1 {
+  z-index: 1;
+}
+.grp-img .i2 {
+  left: 40px;
+}
+.grp-img .i3 {
+  left: 80px;
+}
+.grp-info {
+  padding: 0 15px;
+}
+.grp-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.grp-status {
+  letter-spacing: 1px;
+}
+
+.chatbox {
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.chatbox .chat {
+  display: flex;
+  gap: 15px;
+}
+.chatbox img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: solid 2px white;
+}
+.chatbox .msg {
+  text-align: left;
+  background: #f3f3f3;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 13px;
+  color: #222;
+}
+.captions .item {
+  text-align: left;
+  background: #f3f3f3;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 13px;
+  color: #222;
+}
+.msg ion-icon {
+  font-size: 20px;
+  color: #f3f3f3;
+  position: absolute;
+  top: 10px;
+}
+.chatbox .chat:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.chatbox .chat:nth-child(odd) ion-icon {
+  left: -14px;
+  font-size: 46px;
+}
+.chatbox .chat:nth-child(even) ion-icon {
+  right: -14px;
+  font-size: 46px;
+  transform: rotate(0);
+}
+
+.policy {
+  background: #f3f3f3;
+  padding: 25px;
+  border-radius: 0 0 10px 10px;
+}
+.policy p {
+  font-size: 13px;
+}
+.policy p a {
+  font-size: 13px;
+  color: #f3f3f3;
+  text-decoration: underline;
+}
+.agree {
+  display: inline-block;
+  color: #f3f3f3;
+  border: solid 2px #f3f3f3;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.agree:hover {
+  color: white;
+  background: #f3f3f3;
+}
+
+.close {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+}
+.close:hover {
+  box-shadow: #f3f3f3 0 0 10px 10px;
+}
+.close:hover ion-icon {
+  transform: rotate(360deg);
+}
+.close ion-icon {
+  font-size: 40px;
+}
