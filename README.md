@@ -32,3 +32,20 @@ To update and push code to GitHub:
 git add .
 git commit -m "[some comments here]"
 git push
+
+## Deployment
+
+The app is automatically deployed to Heroku once it is updated in GitHub. This process is straightforward and hassle-free. Heroku also manages all necessary SSL security certificates to maintain a secure interface (currently more than needed but will allow for future features, such as enabling users to upload files).
+
+### Run Locally
+
+To run the application locally on your machine, follow these steps:
+
+```bash
+git clone [repo-address-here]
+cd YouTube-Scraper
+
+nvm use 14.15
+
+npm install
+
