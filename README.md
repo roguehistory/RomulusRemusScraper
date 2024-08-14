@@ -48,4 +48,5 @@ cd YouTube-Scraper
 nvm use 14.15
 
 npm install
+npm start    This will run the front-end application in your browser.
 
